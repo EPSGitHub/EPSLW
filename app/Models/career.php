@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class career extends Model
+{
+    use HasFactory;
+    protected $guarded=[];
+
+    //Author name Show
+    Public function Author(){
+        return $this ->belongsTo('App\Models\User','posted_by','id');
+    }
+
+
+}
